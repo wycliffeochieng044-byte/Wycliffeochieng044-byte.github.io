@@ -1,408 +1,578 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wycliffe Onyango Ochieng' | IT Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    <title>Wycliffe Onyango Ochieng' | Personal CV</title>
 
-body {
-    font-family: Arial, sans-serif;
-    background: #050816;
-    color: #f5f7ff;
-    line-height: 1.6;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-header {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 30px;
-    background: radial-gradient(circle at top, #14213d, #050816 60%);
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #07111f;
+            color: white;
+            line-height: 1.6;
+        }
 
-.hero {
-    max-width: 900px;
-}
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #050b14;
+            padding: 15px 5%;
+            border-bottom: 1px solid #00e5ff;
+        }
 
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #00e5ff;
-    box-shadow: 0 0 30px #00e5ff;
-    margin-bottom: 25px;
-}
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-h1 {
-    font-size: 42px;
-    color: #00e5ff;
-    margin-bottom: 10px;
-}
+        .logo {
+            color: #00e5ff;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-.hero h2 {
-    font-size: 22px;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
 
-.hero p {
-    color: #b8c1d9;
-    font-size: 18px;
-}
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 25px;
-    border: 2px solid #00e5ff;
-    border-radius: 30px;
-    color: #00e5ff;
-    text-decoration: none;
-    transition: 0.3s;
-}
+        nav ul li a:hover {
+            color: #00e5ff;
+        }
 
-.btn:hover {
-    background: #00e5ff;
-    color: #050816;
-}
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #07111f, #0b1d31);
+        }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 70px 25px;
-}
+        .hero img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #00e5ff;
+            margin-bottom: 20px;
+        }
 
-section h2 {
-    text-align: center;
-    color: #00e5ff;
-    font-size: 30px;
-    margin-bottom: 35px;
-}
+        .hero h1 {
+            font-size: 42px;
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
 
-.card {
-    background: #0d1326;
-    border: 1px solid #1d2a4a;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.08);
-}
+        .hero h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
 
-.card h3 {
-    color: #00e5ff;
-    margin-bottom: 12px;
-}
+        .hero p {
+            color: #c8d4df;
+            max-width: 700px;
+            margin: auto;
+        }
 
-ul {
-    padding-left: 25px;
-}
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #00e5ff;
+            color: #06101c;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+        }
 
-li {
-    margin-bottom: 8px;
-}
+        .btn:hover {
+            background: white;
+        }
 
-.highlight {
-    color: #00e5ff;
-    font-weight: bold;
-}
+        /* SECTIONS */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 70px 25px;
+        }
 
-.contact a {
-    color: #00e5ff;
-    text-decoration: none;
-}
+        .section-title {
+            text-align: center;
+            color: #00e5ff;
+            font-size: 30px;
+            margin-bottom: 35px;
+        }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #03050d;
-    color: #8892aa;
-}
+        .about-box {
+            background: #0d1b2a;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #00e5ff;
+        }
 
-.motto {
-    text-align: center;
-    font-size: 28px;
-    color: #00e5ff;
-    font-weight: bold;
-    padding: 30px;
-}
-</style>
+        /* CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #0d1b2a;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #17344b;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #00e5ff;
+        }
+
+        .card h3 {
+            color: #00e5ff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #c8d4df;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #0d1b2a;
+            border: 1px solid #00e5ff;
+            padding: 12px 20px;
+            border-radius: 25px;
+            color: #00e5ff;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            text-align: center;
+            background: #0d1b2a;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .contact-box p {
+            margin: 12px;
+        }
+
+        .contact-box a {
+            color: #00e5ff;
+            text-decoration: none;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: #050b14;
+            border-top: 1px solid #17344b;
+        }
+
+        footer span {
+            color: #00e5ff;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="hero">
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
 
-        <!-- Your photo will be added here -->
-        <img src="profile.jpg" alt="Wycliffe Onyango Ochieng'" class="profile-img">
+            <div class="logo">
+                WO.
+            </div>
 
-        <h1>WYCLIFFE ONYANGO OCHIENG'</h1>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-        <h2>BSc. Information Technology Student | Tech Enthusiast</h2>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <header class="hero" id="home">
+
+        <div>
+
+            <img src="profile.jpg"
+                 alt="Wycliffe Onyango Ochieng'">
+
+            <h1>Wycliffe Onyango Ochieng'</h1>
+
+            <h2>
+                Bachelor of Science in Information Technology
+            </h2>
+
+            <p>
+                Kisii University
+            </p>
+
+            <p>
+                Web Development | Cybersecurity | Software Engineering
+            </p>
+
+            <a href="#about" class="btn">
+                Explore My CV
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="about-box">
+
+            <p>
+                Wycliffe Onyango Ochieng' is a Bachelor of Science
+                in Information Technology student at Kisii University.
+                He is passionate about technology and continuously
+                develops his skills in web development, cybersecurity
+                and software engineering.
+            </p>
+
+            <br>
+
+            <p>
+                He is hardworking, disciplined, prayerful, friendly
+                and committed to developing practical technological
+                skills that can be used to solve real-world problems.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Kisii University</h3>
+                <p>
+                    Bachelor of Science in Information Technology
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Kwa Secondary School</h3>
+                <p>
+                    Secondary School Education
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>St. Catherine Bonda Primary School</h3>
+                <p>
+                    Primary School Education
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            Technical & Personal Skills
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">Web Development</div>
+            <div class="skill">Cybersecurity</div>
+            <div class="skill">Software Engineering</div>
+            <div class="skill">Computer Skills</div>
+            <div class="skill">Public Speaking</div>
+            <div class="skill">Teamwork</div>
+            <div class="skill">Problem Solving</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2 class="section-title">
+            Projects & Tech Journey
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Personal CV Website</h3>
+
+                <p>
+                    A personal website developed using HTML and CSS
+                    to present my curriculum vitae online.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Development</h3>
+
+                <p>
+                    Developing practical skills in creating websites
+                    and digital solutions for individuals and businesses.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cybersecurity</h3>
+
+                <p>
+                    Developing knowledge and skills aimed at protecting
+                    computer systems, software and business information.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAREER GOALS -->
+    <section id="goals">
+
+        <h2 class="section-title">
+            Career Goals
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>
+                    Build complete and functional websites for
+                    businesses and organizations.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Cybersecurity</h3>
+                <p>
+                    Develop expertise in cybersecurity and help
+                    protect businesses from digital threats.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Software Engineering</h3>
+                <p>
+                    Build, maintain and support useful software
+                    systems and technological solutions.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- VISION -->
+    <section>
+
+        <h2 class="section-title">
+            My Vision
+        </h2>
+
+        <div class="about-box">
+
+            <p>
+                My vision is to build a successful technology company
+                that develops useful technological solutions, creates
+                employment opportunities, supports my family and gives
+                back positively to the community.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- HOBBIES -->
+    <section>
+
+        <h2 class="section-title">
+            Hobbies & Interests
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">🎵 Listening to Music</div>
+            <div class="skill">🎮 Gaming</div>
+            <div class="skill">💻 Technology Activities</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <div class="contact-box">
+
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:wycliffeochieng044@gmail.com">
+                    wycliffeochieng044@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                <a href="tel:0720283592">
+                    0720283592
+                </a>
+            </p>
+
+            <p>
+                <strong>Facebook:</strong>
+                Prince Polite
+            </p>
+
+            <p>
+                <strong>Instagram:</strong>
+                Prince Polite
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOTTO -->
+    <section>
+
+        <div class="about-box" style="text-align:center;">
+
+            <h2 style="color:#00e5ff;">
+                Personal Motto
+            </h2>
+
+            <br>
+
+            <h2>
+                "Silent mode always on."
+            </h2>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
 
         <p>
-            Kisii University student passionate about Web Development,
-            Cybersecurity and Software Engineering.
+            © 2026 <span>Wycliffe Onyango Ochieng'</span>
         </p>
 
-        <a href="#about" class="btn">Explore My Profile</a>
-
-    </div>
-</header>
-
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<div class="card">
-
-<p>
-Wycliffe Onyango Ochieng' is a Bachelor of Science in Information
-Technology student at Kisii University. He is passionate about
-technology and continuously develops his skills in Web Development,
-Cybersecurity and Software Engineering.
-</p>
-
-<p style="margin-top:15px;">
-He is focused on gaining practical skills that will enable him to
-build useful technological solutions and grow into a successful
-technology professional.
-</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>My Background</h2>
-
-<div class="card">
-
-<p>
-I come from <span class="highlight">Migori County, Suna East Constituency,
-Kakrao Ward</span>, and I was raised in a humble, blessed and prayerful
-background.
-</p>
-
-<p style="margin-top:15px;">
-I began my primary education at <span class="highlight">
-St. Catherine Bonda Primary School</span> in my village.
-</p>
-
-<p style="margin-top:15px;">
-I later attended <span class="highlight">Kwa Secondary School</span>.
-My high-school journey came with challenges, especially financially.
-After losing my father in a road accident around the time I was
-preparing for KCPE, my mother and brother became my main sources of
-support for my education.
-</p>
-
-<p style="margin-top:15px;">
-Despite these challenges, I remained focused and worked hard until I
-achieved a <span class="highlight">C+</span> in KCSE.I joined
-Kisii University by the Grace of GOD.
-</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>My Tech Journey</h2>
-
-<div class="card">
-
-<h3>Web Development 🌐</h3>
-<p>
-I am developing skills in web development with the goal of building
-fully functional websites and digital solutions for businesses.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Cybersecurity 🔐</h3>
-<p>
-I am learning cybersecurity with the long-term goal of helping
-businesses protect their systems, information and digital assets.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Software Engineering 💻</h3>
-<p>
-I am also pursuing software engineering during my part-time learning,
-with the goal of gaining practical software development and
-maintenance skills.
-</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Skills</h2>
-
-<div class="card">
-
-<ul>
-<li>💻 Computer Skills</li>
-<li>🎤 Public Speaking</li>
-<li>🤝 Teamwork & Collaboration</li>
-<li>🌐 Web Development — Developing</li>
-<li>🔐 Cybersecurity — Developing</li>
-<li>⚙️ Software Engineering — Developing</li>
-</ul>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Career Goals</h2>
-
-<div class="card">
-
-<ul>
-<li>Build fully functional websites for businesses.</li>
-<li>Develop into a cybersecurity professional.</li>
-<li>Help businesses protect their systems and information.</li>
-<li>Develop software maintenance and support skills.</li>
-</ul>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>My Vision</h2>
-
-<div class="card">
-
-<p>
-My long-term vision is to build a successful technology company,
-support my family, create employment opportunities, become financially
-independent and give back to my community.
-</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Hobbies & Interests</h2>
-
-<div class="card">
-
-<ul>
-<li>🎵 Listening to music</li>
-<li>🎮 Gaming</li>
-<li>💻 Exploring technology</li>
-</ul>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Current Project</h2>
-
-<div class="card">
-
-<p>
-I am currently working on a technology-related project as I continue
-to develop my practical IT skills.
-</p>
-
-<p style="margin-top:15px;">
-More details about the project will be added as it develops.
-</p>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h2>Personal Motto</h2>
-
-<div class="card motto">
-
-“Be humble, stay focused, and keep growing.”
-“God first, then everything else will fall into place.”
-
-</div>
-
-</section>
-
-
-<section class="contact">
-
-<h2>Contact Me</h2>
-
-<div class="card">
-
-<p>📧 Email:
-<a href="mailto:wycliffeochieng044@gmail.com">
-<a href="mailto:ochiengwycliffe038@gmail.com">
-wycliffeochieng044@gmail.com
-ochiengwycliffe038@gmail.com      
-</a>
-</p>
-
-<p>📱 Phone:
-<a href="tel:0720283592">
-0720283592 or 0743513315
-</a>
-</p>
-
-<p>📘 Facebook: Prince Polite</p>
-<p>♎ WhatsApp: @princepolite</p>
-<p>📸 Instagram: Prince Polite</p>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Wycliffe Onyango Ochieng' | Personal IT Portfolio</p>
-
-<p style="margin-top:8px;">
-Built with passion for technology 💻
-</p>
-
-</footer>
+        <p>
+            Personal CV Website | Bachelor of Science in Information Technology
+        </p>
+
+    </footer>
 
 </body>
-  </html>
+</html>
+    
